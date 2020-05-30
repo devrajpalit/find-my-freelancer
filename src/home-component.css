@@ -1,18 +1,34 @@
-body {
-    background-color: #ffd700;
+.find {
+    /* font-weight: 900; */
+    
+    margin-top: 6vh;
 }
 
-.freelancer-info {
-    width: 15rem;
+.header-font {
+    font-family: 'Cairo', sans-serif;
+}
+
+.title-big {
+    font-size: 5rem;
+}
+
+.title-small {
+    font-size: 3rem;
 }
 
 .card {
-    background: transparent;
     border: none;
 }
 
 .card-img-top {
-    border-radius: 25px;
+    border-radius: 1.5rem;
+}
+
+.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: grey;
 }
 
 .footer {
@@ -29,15 +45,3 @@ body {
     color: white;
 }
 
-.serif {
-font-family: "Times New Roman", Times, serif;
-}
-
-.sansserif {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.find {
-    font-weight: 900;
-    font-family: 'BioRhyme', serif;
-}
