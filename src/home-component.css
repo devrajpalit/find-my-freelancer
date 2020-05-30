@@ -1,0 +1,43 @@
+body {
+    background-color: #ffd700;
+}
+
+.freelancer-info {
+    width: 15rem;
+}
+
+.card {
+    background: transparent;
+    border: none;
+}
+
+.card-img-top {
+    border-radius: 25px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.ad {
+    color: white;
+}
+
+.serif {
+font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.find {
+    font-weight: 900;
+    font-family: 'BioRhyme', serif;
+}

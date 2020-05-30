@@ -8,6 +8,7 @@ export interface IState {
 	data: IFreelancer[];
 	ad: IAd;
 	dataCurrent: IFreelancer[];
+	searchFor: string;
 }
 
 export interface IFreelancer {
