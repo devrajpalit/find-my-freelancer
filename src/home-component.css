@@ -1,6 +1,4 @@
 .find {
-    /* font-weight: 900; */
-    
     margin-top: 6vh;
 }
 
@@ -25,10 +23,13 @@
 }
 
 .card-text {
+    color: grey;
+}
+
+.email {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: grey;
 }
 
 .footer {

@@ -21,12 +21,15 @@ class HomeComponent extends React.Component<IProps, IState> {
         return (this.state && (
             <div className='container'>
                 <div className='my-4'>
-                    <h3 className='header-font d-lg-none my-3'>Find My <h1>Freelancer</h1></h3>
+                    <div className='header-font d-lg-none my-3'>
+                        <h3>Find My</h3>
+                        <h1>Freelancer</h1>
+                    </div>
                     {this.renderSearch()}
                 </div>
 
                 <div className='row'>
-                    <div className='header-font find d-none d-lg-block col-md-6 text-center'>
+                    <div className='header-font find d-none d-lg-block col-lg-6'>
                         <h4 className='title-small'>Find My</h4>
                         <h1 className='title-big'>Freelancer</h1>
                     </div>
@@ -35,13 +38,26 @@ class HomeComponent extends React.Component<IProps, IState> {
                     })}
                 </div>
 
-                <div className="footer">
+                <div className='row'>
+                    <div className='col-12 col-sm-6 col-lg-3'>
+                        <div className="card">
+                            <div className="card-body p-1">
+                                <h5 className="card-title">{this.state.ad.company}</h5>
+                                <h6 className="card-subtitle mb-2 text-muted">Advertisement</h6>
+                                <p className="card-text">{this.state.ad.text}</p>
+                                <a href={this.state.ad.url} className="btn btn-primary">Visit {this.state.ad.company}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* <div className="footer">
                     <a className='ad' href={this.state.ad.url}>
                         <div className='ad'>
                             {this.state.ad.company} : {this.state.ad.text}
                         </div>
                     </a>
-                </div>
+                </div> */}
             </div>
         ));
     }
@@ -73,7 +89,7 @@ class HomeComponent extends React.Component<IProps, IState> {
                     <img className="card-img-top img-fluid" src={freelancer.avatar} alt="Freelancer's Profile" />
                     <div className="card-body px-1">
                         <h5 className="card-title mb-1">{freelancer.first_name} {freelancer.last_name}</h5>
-                        <p className="card-text">{freelancer.email}</p>
+                        <p className="card-text email">{freelancer.email}</p>
                     </div>
                 </div>
             </div>
@@ -91,7 +107,7 @@ class HomeComponent extends React.Component<IProps, IState> {
                     data: response.data,
                     ad: response.ad,
                     dataCurrent: response.data,
-                    searchFor: 'email'
+                    searchBy: 'email'
                 });
             }
 
@@ -102,7 +118,7 @@ class HomeComponent extends React.Component<IProps, IState> {
         const searchParam = event.target.value.toLowerCase();
         let dataUpdate = this.state.data;
         dataUpdate = dataUpdate.filter((freelancer: IFreelancer) => {
-            switch (this.state.searchFor) {
+            switch (this.state.searchBy) {
                 case 'email':
                     return freelancer.email.toLowerCase().includes(searchParam);
                 case 'first_name':
@@ -118,7 +134,7 @@ class HomeComponent extends React.Component<IProps, IState> {
 
     private handleSearchTypeInput(event: any) {
         const input = event.target.value;
-        this.setState({ searchFor: input });
+        this.setState({ searchBy: input });
     }
 }
 export default HomeComponent;
