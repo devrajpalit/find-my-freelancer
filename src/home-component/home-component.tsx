@@ -39,25 +39,17 @@ class HomeComponent extends React.Component<IProps, IState> {
                 </div>
 
                 <div className='row'>
-                    <div className='col-12 col-sm-6 col-lg-3'>
+                    <div className='col-12 col-md-6'>
                         <div className="card">
                             <div className="card-body p-1">
                                 <h5 className="card-title">{this.state.ad.company}</h5>
                                 <h6 className="card-subtitle mb-2 text-muted">Advertisement</h6>
                                 <p className="card-text">{this.state.ad.text}</p>
-                                <a href={this.state.ad.url} className="btn btn-primary">Visit {this.state.ad.company}</a>
+                                <a className="btn btn-primary" href={this.state.ad.url} target="_blank" rel="noopener noreferrer">Visit {this.state.ad.company}</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* <div className="footer">
-                    <a className='ad' href={this.state.ad.url}>
-                        <div className='ad'>
-                            {this.state.ad.company} : {this.state.ad.text}
-                        </div>
-                    </a>
-                </div> */}
             </div>
         ));
     }
