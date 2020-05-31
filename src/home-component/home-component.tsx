@@ -1,6 +1,6 @@
 import React from 'react';
-import { IProps, IState, IFreelancer } from './typings';
-import RestService from './shared/rest-service';
+import { IProps, IState, IFreelancer } from '../typings';
+import RestService from '../shared/rest-service';
 import './home-component.css'
 
 class HomeComponent extends React.Component<IProps, IState> {
@@ -28,7 +28,7 @@ class HomeComponent extends React.Component<IProps, IState> {
                     {this.renderSearch()}
                 </div>
 
-                <div className='row'>
+                <div className='row mb-4'>
                     <div className='header-font find d-none d-lg-block col-lg-6'>
                         <h4 className='title-small'>Find My</h4>
                         <h1 className='title-big'>Freelancer</h1>

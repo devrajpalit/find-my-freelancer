@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
-import HomeComponent from './home-component';
+import HomeComponent from './home-component/home-component';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
